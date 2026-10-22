@@ -1,6 +1,6 @@
 // Junta tudo que a busca por palavra trouxe (dados-busca/), tira as cópias e agrupa por anunciante, para a IA
 // decidir quem é concorrente de verdade (vende o mesmo, para o mesmo cliente). Só conta anúncio no ar há --min-dias
-// (padrão: minDias do estudo.json, ou 30): anúncio que dura meses é anúncio que se paga.
+// (padrão: minDias do estudo.json, ou 30): anúncio novo pode ser teste que morre amanhã.
 // Uso: node 1-estudo-de-mercado/scripts/triagem.mjs --estudo <slug> [--min-dias 30]  → grava triagem.json
 import fs from 'node:fs';
 import path from 'node:path';

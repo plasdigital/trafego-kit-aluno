@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Estudo de mercado</title>
 <style>
 :root {
@@ -129,9 +130,9 @@ function secaoPadroes() {
   <h2>O que os anúncios fazem</h2>
   <div class="grade">${d.padroes.map(cartaoPadrao).join('')}</div>
   <h2>Os anúncios mais rodados</h2>
-  <p class="nota">Quanto mais tempo no ar, mais chance de estar dando resultado: ninguém paga meses por anúncio que não traz cliente.</p>
-  <div class="tabela"><table><thead><tr><th>Anúncio</th><th>Anunciante</th><th>O que oferece</th><th>Vai para</th><th class="n">Dias no ar</th></tr></thead><tbody>
-  ${maisRodados.map((a) => `<tr><td>${codigoBotao(a.codigo)}</td><td>${esc(a.pagina)}</td><td>${esc(a.oferta)}</td><td>${esc(a.canal)}</td><td class="n">${fmt(a.diasNoAr)}</td></tr>`).join('')}
+  <p class="nota">Tempo no ar sozinho não prova que vende: pode ser peça esquecida. Leia junto as variações e a nota.</p>
+  <div class="tabela"><table><thead><tr><th>Anúncio</th><th>Anunciante</th><th>O que oferece</th><th>Vai para</th><th class="n">Dias no ar</th><th class="n">Variações</th><th class="n">Nota</th></tr></thead><tbody>
+  ${maisRodados.map((a) => `<tr><td>${codigoBotao(a.codigo)}</td><td>${esc(a.pagina)}</td><td>${esc(a.oferta)}</td><td>${esc(a.canal)}</td><td class="n">${fmt(a.diasNoAr)}</td><td class="n">${fmt(a.variacoes)}</td><td class="n">${a.nota}/10</td></tr>`).join('')}
   </tbody></table></div>
   <h2>As páginas de destino${total ? ` (${total})` : ''}</h2>
   ${total ? `<div class="grade">${d.padroesPaginas.map(cartaoPadrao).join('')}

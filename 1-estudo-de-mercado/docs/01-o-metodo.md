@@ -7,19 +7,21 @@ no seu nicho, e boa parte disso está público.
 Este estudo lê esse material e transforma em **padrões**: o que o mercado faz igual, o que dura, o que ninguém faz.
 O anúncio e a página que você vai criar saem desses padrões, e não do achismo.
 
-## 1. A regra dos 30 dias
+## 1. A regra dos 30 dias, e o limite dela
 
 A Biblioteca de Anúncios da Meta mostra todo anúncio ativo no Facebook e no Instagram, de qualquer empresa, e
-**a data em que ele começou a rodar**. Ela não mostra quanto gastou nem quantos clientes trouxe. A data é a pista:
+**a data em que ele começou a rodar**. Ela não mostra quanto gastou nem quantos clientes trouxe. A data é a pista.
 
-> Ninguém paga um anúncio por 30, 60, 90 dias se ele não traz cliente.
+Por isso o estudo só conta anúncio **no ar há 30+ dias** (dá para mudar o `minDias` no `estudo.json`): anúncio
+novo pode ser um teste que vai morrer amanhã. Os 30 dias são o **corte de entrada**, não a prova.
 
-Por isso o estudo só conta anúncio **no ar há 30+ dias** (dá para mudar o `minDias` no `estudo.json`). Anúncio
-novo pode ser um teste que vai morrer amanhã. Anúncio antigo provavelmente se paga.
+**Tempo no ar sozinho não prova que vende.** Num estudo real com 162 anúncios, os que estavam no ar havia 240+
+dias tiveram a **menor** nota média, e os de 30 a 59 dias, a maior. Vários dos mais velhos eram peças de fundo que
+ninguém lembrou de desligar. O sinal forte é outro:
 
-Dois sinais reforçam isso:
 - **Variações:** o mesmo anúncio com várias versões (`variacoes` no painel) é alguém investindo naquela ideia.
-- **Cópias:** o mesmo texto rodando em vários anúncios do mesmo anunciante. A triagem junta as cópias numa só.
+- **Repetição:** a mesma linha (o mesmo gancho, a mesma oferta) rodando em várias peças do mesmo anunciante. A
+  triagem junta as cópias numa só e mostra quantas eram.
 
 ## 2. Captação ou distribuição
 

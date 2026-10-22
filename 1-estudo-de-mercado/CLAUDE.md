@@ -16,6 +16,7 @@ O porquê de cada passo está em [docs/01-o-metodo.md](docs/01-o-metodo.md).
 | "mostra o painel" | Abrir `1-estudo-de-mercado/estudos/<slug>/painel/index.html` no navegador |
 | "quais as palavras mais concorridas no Google?" | Passo 11 |
 | "transforma isso em planejamento" | [docs/01-o-metodo.md](docs/01-o-metodo.md) §5: dos padrões ao plano |
+| "quero mostrar para o cliente" / "publica o painel" | [docs/02-mostrar-ao-cliente.md](docs/02-mostrar-ao-cliente.md): hospedagem de site, pasta com senha. **Subir para a hospedagem muda o mundo: só com o "sim" do dono** |
 
 **Só lê, pode rodar sem perguntar:** todos os scripts desta pasta. Nenhum deles publica, envia ou gasta.
 O passo 1 abre o Chrome em segundo plano e leva de 1 a 3 minutos por termo; avise o dono antes de começar.
