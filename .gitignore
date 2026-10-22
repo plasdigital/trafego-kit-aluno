@@ -1,0 +1,8 @@
+# o que é seu e não vai para o git
+node_modules/
+.env
+*.env
+# os estudos: mídia e prints de terceiros, e o seu estudo comercial
+1-estudo-de-mercado/estudos/
+__pycache__/
+*.log

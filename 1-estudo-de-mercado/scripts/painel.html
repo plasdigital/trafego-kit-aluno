@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estudo de mercado</title>
+<style>
+:root {
+  --fundo: #f6f5f2; --cartao: #ffffff; --texto: #1c1b19; --suave: #6b6862; --linha: #e4e1da;
+  --barra: #2f6f5e; --barra-fundo: #e7ece9; --destaque: #c2410c; --bom: #2f6f5e; --medio: #a16207; --ruim: #b42318;
+  --sombra: 0 1px 2px rgba(0,0,0,.05), 0 2px 8px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fundo: #141413; --cartao: #1e1d1b; --texto: #ecebe7; --suave: #a3a09a; --linha: #34322e;
+    --barra: #5fb39b; --barra-fundo: #2a2f2c; --destaque: #fb923c; --bom: #5fb39b; --medio: #eab308; --ruim: #f87171; --sombra: none; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fundo); color: var(--texto); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header { padding: 28px 20px 0; max-width: 1240px; margin: 0 auto; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -.01em; }
+.sub { color: var(--suave); margin: 0; }
+.numeros { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; }
+.numero { background: var(--cartao); border: 1px solid var(--linha); border-radius: 10px; padding: 10px 14px; min-width: 130px; }
+.numero b { display: block; font-size: 22px; font-variant-numeric: tabular-nums; }
+.numero span { color: var(--suave); font-size: 13px; }
+nav { position: sticky; top: 0; z-index: 5; background: var(--fundo); border-bottom: 1px solid var(--linha); margin-top: 20px; }
+nav div { max-width: 1240px; margin: 0 auto; padding: 0 12px; display: flex; gap: 2px; overflow-x: auto; }
+nav button { background: none; border: 0; color: var(--suave); font: inherit; font-weight: 600; padding: 12px 10px; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; }
+nav button[aria-selected="true"] { color: var(--texto); border-bottom-color: var(--destaque); }
+main { max-width: 1240px; margin: 0 auto; padding: 20px; }
+.secao[hidden] { display: none; }
+.grade { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr)); }
+.grade.larga { grid-template-columns: repeat(auto-fill, minmax(min(440px, 100%), 1fr)); }
+.cartao { background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: 16px; box-shadow: var(--sombra); }
+.cartao h3 { margin: 0 0 2px; font-size: 16px; }
+.cartao .nota { color: var(--suave); font-size: 13px; margin: 0 0 12px; }
+.barra { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; align-items: center; margin: 7px 0; font-size: 14px; }
+.barra .trilho { grid-column: 1 / -1; height: 8px; background: var(--barra-fundo); border-radius: 4px; overflow: hidden; }
+.barra .trilho i { display: block; height: 100%; background: var(--barra); border-radius: 4px; }
+.barra em { font-style: normal; color: var(--suave); text-align: right; font-variant-numeric: tabular-nums; font-size: 13px; white-space: nowrap; }
+h2 { font-size: 18px; margin: 28px 0 12px; }
+h2:first-child { margin-top: 4px; }
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.filtros input, .filtros select { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--linha); background: var(--cartao); color: var(--texto); }
+.filtros input { flex: 1 1 220px; }
+.contagem { color: var(--suave); font-size: 13px; margin: -6px 0 12px; }
+.anuncio { padding: 0; overflow: hidden; display: flex; flex-direction: column; cursor: pointer; text-align: left; font: inherit; color: inherit; }
+.anuncio .midia { aspect-ratio: 4 / 3; background: var(--barra-fundo); display: block; width: 100%; object-fit: cover; }
+.anuncio .corpo { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; }
+.linha-topo { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--suave); }
+.selo { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
+.selo.referencia_forte { background: color-mix(in srgb, var(--bom) 18%, transparent); color: var(--bom); }
+.selo.aproveitavel { background: color-mix(in srgb, var(--medio) 18%, transparent); color: var(--medio); }
+.selo.evitar { background: color-mix(in srgb, var(--ruim) 15%, transparent); color: var(--ruim); }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 4px; }
+.etiqueta { font-size: 12px; border: 1px solid var(--linha); border-radius: 99px; padding: 1px 8px; color: var(--suave); }
+.oferta { display: block; font-weight: 600; margin: 0; }
+.gancho { display: block; color: var(--suave); font-size: 14px; margin: 0; }
+table { width: 100%; border-collapse: collapse; background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; overflow: hidden; font-size: 14px; }
+th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--linha); vertical-align: top; }
+th { font-size: 13px; color: var(--suave); font-weight: 600; }
+td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tabela { overflow-x: auto; }
+a { color: var(--destaque); }
+.codigo { font-family: ui-monospace, Consolas, monospace; font-size: 12px; background: var(--barra-fundo); border-radius: 5px; padding: 1px 5px; border: 0; color: var(--texto); cursor: pointer; }
+.pagina-lp { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; }
+.pagina-lp img { width: 150px; border-radius: 8px; border: 1px solid var(--linha); cursor: zoom-in; }
+.pagina-lp ol, .pagina-lp ul { margin: 4px 0 8px; padding-left: 18px; }
+.rotulo { font-size: 12px; font-weight: 700; color: var(--suave); text-transform: uppercase; letter-spacing: .04em; margin: 10px 0 2px; }
+.aprendizado p { margin: 6px 0; }
+.vazio { color: var(--suave); background: var(--cartao); border: 1px dashed var(--linha); border-radius: 12px; padding: 20px; }
+dialog { width: min(920px, calc(100vw - 24px)); max-height: calc(100vh - 32px); border: 1px solid var(--linha); border-radius: 14px; padding: 0; background: var(--cartao); color: var(--texto); }
+dialog::backdrop { background: rgba(0,0,0,.55); }
+.modal { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); }
+.modal .midias { background: #000; display: flex; flex-direction: column; gap: 2px; }
+.modal .midias img, .modal .midias video { width: 100%; display: block; }
+.modal .texto { padding: 18px 20px; overflow-y: auto; max-height: calc(100vh - 34px); }
+.modal h3 { margin: 0 0 4px; }
+.fechar { position: sticky; top: 0; float: right; font: inherit; font-size: 20px; border: 0; background: none; color: var(--suave); cursor: pointer; }
+.notas { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 10px 0; }
+.notas div { background: var(--barra-fundo); border-radius: 8px; padding: 6px; text-align: center; font-size: 12px; color: var(--suave); }
+.notas b { display: block; font-size: 18px; color: var(--texto); }
+.pre { white-space: pre-wrap; font-size: 14px; background: var(--fundo); border-radius: 8px; padding: 10px; max-height: 220px; overflow-y: auto; }
+@media (max-width: 720px) {
+  header { padding: 20px 16px 0; } main { padding: 16px; } h1 { font-size: 22px; }
+  .grade { grid-template-columns: 1fr; } .modal { grid-template-columns: 1fr; } .modal .texto { max-height: none; }
+  .pagina-lp { grid-template-columns: 1fr; } .pagina-lp img { width: 100%; max-height: 320px; object-fit: cover; object-position: top; }
+  .notas { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="titulo">Estudo de mercado</h1>
+  <p class="sub" id="sub"></p>
+  <div class="numeros" id="numeros"></div>
+</header>
+<nav><div role="tablist" id="abas"></div></nav>
+<main id="conteudo"></main>
+<dialog id="modal"></dialog>
+<script>
+const DADOS = /*__DADOS__*/null;
+
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString('pt-BR'));
+const pct = (n, t) => (t ? Math.round((100 * n) / t) : 0);
+const SELO = { referencia_forte: 'Referência forte', aproveitavel: 'Aproveitável', evitar: 'Evitar' };
+const CRITERIOS = ['gancho', 'clareza', 'prova', 'diferenciacao', 'aproveitavel'];
+const CRITERIOS_LP = ['clareza', 'oferta', 'prova', 'qualificacao', 'caminho'];
+const VOCE = { tem: 'Você tem', nao_tem: 'Você não tem', na_frente: 'Você está na frente', decidir: 'Decidir' };
+const porCodigo = new Map((DADOS?.anuncios ?? []).map((a) => [a.codigo, a]));
+
+function barras(lista) {
+  if (!lista?.length) return '<p class="nota">Sem dado ainda.</p>';
+  return lista.map((b) => `<div class="barra"><span>${esc(b.rotulo)}</span><em>${b.n} · ${pct(b.n, b.total)}%</em><div class="trilho"><i style="width:${pct(b.n, b.total)}%"></i></div></div>`).join('');
+}
+const cartaoPadrao = (p) => `<div class="cartao"><h3>${esc(p.titulo)}</h3><p class="nota">${esc(p.nota)}</p>${barras(p.barras)}</div>`;
+const codigoBotao = (c) => (porCodigo.has(c) ? `<button class="codigo" data-codigo="${esc(c)}">${esc(c)}</button>` : `<span class="codigo">${esc(c)}</span>`);
+
+function secaoPadroes() {
+  const d = DADOS;
+  const maisRodados = [...d.anuncios].sort((a, b) => (b.diasNoAr ?? 0) - (a.diasNoAr ?? 0)).slice(0, 10);
+  const total = d.paginas.length;
+  const contagemPerguntas = new Map();
+  for (const p of d.paginas) for (const q of p.perguntas ?? []) { const k = q.toLowerCase().replace(/[?*:]/g, '').trim(); contagemPerguntas.set(k, { q, n: (contagemPerguntas.get(k)?.n ?? 0) + 1 }); }
+  const perguntas = [...contagemPerguntas.values()].sort((a, b) => b.n - a.n).slice(0, 12);
+  const palavras = d.google?.palavras?.slice(0, 15) ?? [];
+  return `
+  <h2>O que os anúncios fazem</h2>
+  <div class="grade">${d.padroes.map(cartaoPadrao).join('')}</div>
+  <h2>Os anúncios mais rodados</h2>
+  <p class="nota">Quanto mais tempo no ar, mais chance de estar dando resultado: ninguém paga meses por anúncio que não traz cliente.</p>
+  <div class="tabela"><table><thead><tr><th>Anúncio</th><th>Anunciante</th><th>O que oferece</th><th>Vai para</th><th class="n">Dias no ar</th></tr></thead><tbody>
+  ${maisRodados.map((a) => `<tr><td>${codigoBotao(a.codigo)}</td><td>${esc(a.pagina)}</td><td>${esc(a.oferta)}</td><td>${esc(a.canal)}</td><td class="n">${fmt(a.diasNoAr)}</td></tr>`).join('')}
+  </tbody></table></div>
+  <h2>As páginas de destino${total ? ` (${total})` : ''}</h2>
+  ${total ? `<div class="grade">${d.padroesPaginas.map(cartaoPadrao).join('')}
+    <div class="cartao"><h3>O que perguntam no formulário</h3><p class="nota">As perguntas que mais se repetem nas páginas lidas.</p>
+    ${perguntas.length ? perguntas.map((x) => `<div class="barra"><span>${esc(x.q)}</span><em>${x.n}</em><div class="trilho"><i style="width:${pct(x.n, total)}%"></i></div></div>`).join('') : '<p class="nota">Nenhuma pergunta lida ainda.</p>'}</div></div>`
+    : '<p class="vazio">As páginas ainda não foram lidas. Rode o passo das páginas (paginas.mjs) e a análise delas.</p>'}
+  <h2>As palavras mais concorridas no Google</h2>
+  ${palavras.length ? `<div class="tabela"><table><thead><tr><th>Palavra</th><th class="n">Buscas por mês</th><th>Concorrência</th><th class="n">Lance (topo da página)</th></tr></thead><tbody>
+    ${palavras.map((p) => `<tr><td>${esc(p.palavra)}</td><td class="n">${fmt(p.buscas)}</td><td>${esc(p.concorrencia ?? '—')}${p.indice != null ? ` · ${p.indice}` : ''}</td><td class="n">${p.lanceMin != null || p.lanceMax != null ? `${fmt(p.lanceMin)} a ${fmt(p.lanceMax)}` : '—'}</td></tr>`).join('')}
+    </tbody></table></div><p class="nota">Lista completa na aba Google.</p>`
+    : '<p class="vazio">Sem dado do Google ainda. Rode google-palavras.mjs com o CSV do Planejador de palavras-chave.</p>'}`;
+}
+
+function cartaoAnuncio(a) {
+  return `<button class="cartao anuncio" data-codigo="${esc(a.codigo)}">
+    ${a.capa ? `<img class="midia" loading="lazy" src="${esc(a.capa)}" alt="">` : '<span class="midia"></span>'}
+    <span class="corpo">
+      <span class="linha-topo"><span>${esc(a.codigo)} · ${fmt(a.diasNoAr)} dias</span><span class="selo ${esc(a.selo)}">${esc(SELO[a.selo])} ${a.nota}/10</span></span>
+      <strong>${esc(a.pagina)}</strong>
+      <span class="oferta">${esc(a.oferta)}</span>
+      <span class="gancho">${esc(a.gancho)}</span>
+      <span class="etiquetas"><span class="etiqueta">${esc(a.canal)}</span><span class="etiqueta">${esc(a.formato)}</span>${a.local ? '<span class="etiqueta">da região</span>' : ''}${a.objetivo === 'distribuicao' ? '<span class="etiqueta">distribuição</span>' : ''}</span>
+    </span></button>`;
+}
+
+function secaoAnuncios() {
+  const opcoes = (campo) => [...new Set(DADOS.anuncios.map((a) => a[campo]).filter(Boolean))].sort().map((v) => `<option>${esc(v)}</option>`).join('');
+  return `<div class="filtros">
+    <input id="f-busca" type="search" placeholder="Buscar por anunciante, oferta, texto ou código (M-012)">
+    <select id="f-canal"><option value="">Todo destino</option>${opcoes('canal')}</select>
+    <select id="f-formato"><option value="">Todo formato</option>${opcoes('formato')}</select>
+    <select id="f-selo"><option value="">Toda nota</option>${Object.entries(SELO).map(([k, v]) => `<option value="${k}">${v}</option>`).join('')}</select>
+    <select id="f-objetivo"><option value="">Captação e distribuição</option><option value="captacao">Só captação</option><option value="distribuicao">Só distribuição</option></select>
+    <select id="f-ordem"><option value="nota">Melhor nota</option><option value="dias">Mais tempo no ar</option></select>
+  </div><p class="contagem" id="f-contagem"></p><div class="grade" id="lista-anuncios"></div>`;
+}
+
+function filtrarAnuncios() {
+  const v = (id) => document.getElementById(id).value;
+  const busca = v('f-busca').trim().toLowerCase().replace(/^m-?0*/, '');
+  const lista = DADOS.anuncios.filter((a) =>
+    (!v('f-canal') || a.canal === v('f-canal')) && (!v('f-formato') || a.formato === v('f-formato')) &&
+    (!v('f-selo') || a.selo === v('f-selo')) && (!v('f-objetivo') || a.objetivo === v('f-objetivo')) &&
+    (!busca || a.codigo.replace(/^M-0*/, '') === busca || [a.pagina, a.oferta, a.gancho, a.texto, a.titulo, a.transcricao].join(' ').toLowerCase().includes(busca)))
+    .sort((a, b) => (v('f-ordem') === 'dias' ? (b.diasNoAr ?? 0) - (a.diasNoAr ?? 0) : b.nota - a.nota));
+  document.getElementById('f-contagem').textContent = `${lista.length} de ${DADOS.anuncios.length} anúncios`;
+  document.getElementById('lista-anuncios').innerHTML = lista.map(cartaoAnuncio).join('') || '<p class="vazio">Nenhum anúncio com esses filtros.</p>';
+}
+
+function secaoPaginas() {
+  if (!DADOS.paginas.length) return '<p class="vazio">Nenhuma página de destino lida ainda.</p>';
+  const lista = (titulo, itens, ordenada) => (itens?.length ? `<div class="rotulo">${titulo}</div><${ordenada ? 'ol' : 'ul'}>${itens.map((i) => `<li>${esc(i)}</li>`).join('')}</${ordenada ? 'ol' : 'ul'}>` : '');
+  return `<div class="grade larga">${DADOS.paginas.map((p) => `
+    <div class="cartao pagina-lp">
+      <div>${p.topo ? `<img loading="lazy" src="${esc(p.topo)}" data-inteira="${esc(p.inteira ?? '')}" alt="A primeira tela da página no celular">` : ''}</div>
+      <div>
+        <div class="linha-topo"><span>${esc(p.dominio)}</span>${p.nota != null ? `<span>${p.nota}/10</span>` : ''}</div>
+        <h3>${esc(p.anunciante)}</h3>
+        ${p.erro ? `<p class="nota">Não abriu: ${esc(p.erro)}</p>` : ''}
+        ${p.promessa ? `<p class="oferta">${esc(p.promessa)}</p>` : ''}
+        ${p.oferta ? `<p class="gancho">Oferta: ${esc(p.oferta)}</p>` : ''}
+        <div class="etiquetas">${(p.levaPara ?? []).map((x) => `<span class="etiqueta">${esc(x)}</span>`).join('')}${p.atrito ? `<span class="etiqueta">atrito ${esc(p.atrito)}</span>` : ''}</div>
+        ${lista('O que o formulário pergunta', p.perguntas, true)}
+        ${lista('Filtros', p.filtros)}
+        ${lista('As seções, na ordem', p.estrutura, true)}
+        ${lista('Provas', p.provas)}
+        ${p.whatsapp ? `<div class="rotulo">Mensagem pronta do WhatsApp</div><p>${esc(p.whatsapp)}</p>` : ''}
+        ${p.valeCopiar ? `<div class="rotulo">Vale copiar</div><p>${esc(p.valeCopiar)}</p>` : ''}
+        ${p.fraco ? `<div class="rotulo">Fraco</div><p>${esc(p.fraco)}</p>` : ''}
+        ${p.comoUsar ? `<div class="rotulo">Como você usaria</div><p>${esc(p.comoUsar)}</p>` : ''}
+        <div class="rotulo">Anúncios que levam para cá</div><p>${p.anuncios.map((a) => codigoBotao(a.codigo)).join(' ')} · <a href="${esc(p.endereco)}" target="_blank" rel="noopener">abrir a página</a></p>
+      </div>
+    </div>`).join('')}</div>`;
+}
+
+function secaoEstrategias() {
+  const apr = DADOS.aprendizados ?? [];
+  const voce = DADOS.voce ?? { igual: [], diferente: [] };
+  const beneficios = DADOS.beneficios ?? [];
+  return `
+  ${apr.length ? `<h2>O que o mercado ensina</h2><div class="grade">${apr.map((x) => `<div class="cartao aprendizado"><h3>${esc(x.titulo)}</h3><p>${esc(x.texto)}</p>${x.prova?.length ? `<p>${x.prova.map(codigoBotao).join(' ')}</p>` : ''}</div>`).join('')}</div>`
+    : '<p class="vazio">As conclusões ainda não foram escritas (estrategias.json).</p>'}
+  ${voce.igual?.length || voce.diferente?.length ? `<h2>O que fazer</h2><div class="grade">
+    <div class="cartao"><h3>Fazer igual</h3><ul>${(voce.igual ?? []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="cartao"><h3>Fazer diferente</h3><ul>${(voce.diferente ?? []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div></div>` : ''}
+  <h2>Benefícios em destaque</h2>
+  ${beneficios.length ? `<div class="tabela"><table><thead><tr><th>Benefício</th><th class="n">Anunciantes</th><th>Quem usa</th><th>Você</th></tr></thead><tbody>
+    ${beneficios.map((b) => `<tr><td>${esc(b.rotulo)}</td><td class="n">${b.anunciantes.length}</td><td>${b.anunciantes.slice(0, 6).map((x) => codigoBotao(x.codigo)).join(' ')}${b.anunciantes.length > 6 ? ' …' : ''}</td><td><strong>${esc(VOCE[b.voce] ?? b.voce)}</strong>${b.nota ? `<br><span class="nota">${esc(b.nota)}</span>` : ''}</td></tr>`).join('')}
+    </tbody></table></div>` : '<p class="vazio">Nenhum benefício marcado.</p>'}`;
+}
+
+function secaoGoogle() {
+  const p = DADOS.google?.palavras ?? [];
+  if (!p.length) return '<p class="vazio">Sem dado do Google ainda. Baixe as ideias do Planejador de palavras-chave (CSV) e rode: node scripts/google-palavras.mjs --estudo &lt;slug&gt; arquivo.csv</p>';
+  return `<p class="nota">${p.length} palavras, da mais concorrida para a menos. Fonte: ${esc((DADOS.google.fontes ?? []).join(', '))}.</p>
+  <div class="tabela"><table><thead><tr><th>Palavra</th><th class="n">Buscas por mês</th><th>Concorrência</th><th class="n">Índice</th><th class="n">Lance mínimo</th><th class="n">Lance máximo</th></tr></thead><tbody>
+  ${p.map((x) => `<tr><td>${esc(x.palavra)}</td><td class="n">${fmt(x.buscas)}</td><td>${esc(x.concorrencia ?? '—')}</td><td class="n">${fmt(x.indice)}</td><td class="n">${fmt(x.lanceMin)}</td><td class="n">${fmt(x.lanceMax)}</td></tr>`).join('')}
+  </tbody></table></div>`;
+}
+
+function abrirAnuncio(codigo) {
+  const a = porCodigo.get(codigo);
+  if (!a) return;
+  const m = document.getElementById('modal');
+  const midias = a.video ? `<video controls preload="none" poster="${esc(a.capa ?? '')}" src="${esc(a.video)}"></video>` : (a.imagens.length ? a.imagens : [a.capa]).filter(Boolean).map((s) => `<img src="${esc(s)}" alt="">`).join('');
+  const bloco = (t, x) => (x ? `<div class="rotulo">${t}</div><p>${esc(x)}</p>` : '');
+  m.innerHTML = `<div class="modal"><div class="midias">${midias}</div><div class="texto">
+    <button class="fechar" aria-label="Fechar">×</button>
+    <div class="linha-topo"><span>${esc(a.codigo)} · no ar desde ${esc(a.inicio)} (${fmt(a.diasNoAr)} dias)${a.variacoes > 1 ? ` · ${a.variacoes} variações` : ''}</span></div>
+    <h3>${esc(a.pagina)}</h3>
+    <span class="selo ${esc(a.selo)}">${esc(SELO[a.selo])} · ${a.nota}/10</span>
+    <div class="notas">${CRITERIOS.map((c) => `<div><b>${a.notas?.[c] ?? '—'}</b>${c === 'diferenciacao' ? 'diferenciação' : c === 'aproveitavel' ? 'aproveitável' : c}</div>`).join('')}</div>
+    ${bloco('O que oferece', a.oferta)}${bloco('Gancho (0 a 3 s)', a.gancho)}${bloco('Para quem', a.publico)}
+    ${bloco('Por que funciona', a.funciona)}${bloco('O que não funciona', a.naoFunciona)}${bloco('Como você usaria', a.comoUsar)}
+    <div class="rotulo">Destino</div><p>${esc(a.canal)}${a.dominio ? ` · ${esc(a.dominio)}` : ''}${a.cta ? ` · botão "${esc(a.cta)}"` : ''}</p>
+    ${a.titulo || a.texto ? `<div class="rotulo">Texto do anúncio</div><div class="pre">${esc([a.titulo, a.texto].filter(Boolean).join('\n\n'))}</div>` : ''}
+    ${a.transcricao ? `<div class="rotulo">O que se fala no vídeo</div><div class="pre">${esc(a.transcricao)}</div>` : ''}
+    <p><a href="${esc(a.link)}" target="_blank" rel="noopener">Ver na Biblioteca de Anúncios</a></p>
+  </div></div>`;
+  m.showModal();
+}
+
+function abrirImagem(src) {
+  const m = document.getElementById('modal');
+  m.innerHTML = `<div style="position:relative"><button class="fechar" aria-label="Fechar" style="position:absolute;right:8px;top:4px">×</button><img src="${esc(src)}" alt="A página inteira" style="width:100%;display:block"></div>`;
+  m.showModal();
+}
+
+function iniciar() {
+  if (!DADOS) { document.getElementById('conteudo').innerHTML = '<p class="vazio">Esta página é o molde. O painel de verdade é o index.html que o montar.mjs grava em estudos/&lt;slug&gt;/painel/.</p>'; return; }
+  const d = DADOS;
+  document.title = `${d.nome} · estudo de mercado`;
+  document.getElementById('titulo').textContent = d.nome;
+  document.getElementById('sub').textContent = `Biblioteca de Anúncios da Meta, só anúncios no ar há ${d.resumo.minDias}+ dias · atualizado em ${new Date(d.atualizadoEm).toLocaleDateString('pt-BR')}`;
+  const capta = d.anuncios.filter((a) => a.objetivo === 'captacao').length;
+  document.getElementById('numeros').innerHTML = [
+    [fmt(d.resumo.coletados), 'anúncios ativos coletados'], [fmt(d.resumo.anunciantes), 'anunciantes no painel'],
+    [fmt(d.resumo.noPainel), 'anúncios analisados'], [`${pct(capta, d.anuncios.length)}%`, 'captam contato'],
+    [fmt(d.paginas.length), 'páginas de destino'], [fmt(d.resumo.termos.length), 'termos buscados'],
+  ].map(([n, t]) => `<div class="numero"><b>${n}</b><span>${t}</span></div>`).join('');
+
+  const abas = [['padroes', 'Padrões', secaoPadroes], ['anuncios', 'Anúncios', secaoAnuncios], ['paginas', 'Páginas de destino', secaoPaginas], ['estrategias', 'Estratégias', secaoEstrategias], ['google', 'Google', secaoGoogle]];
+  document.getElementById('abas').innerHTML = abas.map(([id, t]) => `<button role="tab" data-aba="${id}">${t}</button>`).join('');
+  document.getElementById('conteudo').innerHTML = abas.map(([id, , f]) => `<section class="secao" id="s-${id}" hidden>${f()}</section>`).join('');
+  const mostrar = (id) => {
+    for (const b of document.querySelectorAll('[data-aba]')) b.setAttribute('aria-selected', String(b.dataset.aba === id));
+    for (const s of document.querySelectorAll('.secao')) s.hidden = s.id !== `s-${id}`;
+    try { localStorage.setItem('estudo-aba', id); } catch {}
+  };
+  document.getElementById('abas').addEventListener('click', (e) => e.target.dataset.aba && mostrar(e.target.dataset.aba));
+  let aba = 'padroes';
+  try { aba = localStorage.getItem('estudo-aba') || aba; } catch {}
+  mostrar(abas.some(([id]) => id === aba) ? aba : 'padroes');
+
+  for (const id of ['f-busca', 'f-canal', 'f-formato', 'f-selo', 'f-objetivo', 'f-ordem']) document.getElementById(id).addEventListener('input', filtrarAnuncios);
+  filtrarAnuncios();
+  document.body.addEventListener('click', (e) => {
+    const alvo = e.target.closest('[data-codigo]');
+    if (alvo) { abrirAnuncio(alvo.dataset.codigo); return; }
+    const img = e.target.closest('img[data-inteira]');
+    if (img?.dataset.inteira) { abrirImagem(img.dataset.inteira); return; }
+    if (e.target.closest('.fechar') || e.target.id === 'modal') document.getElementById('modal').close();
+  });
+}
+iniciar();
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "nome": "Clínicas odontológicas em Campinas (implante e estética)",
+  "sobre": "Quem pediu o estudo e o que vende: clínica odontológica em Campinas-SP, foco em implante e lente de contato dental, ticket alto, atende particular e parcela no cartão. Regras da casa: não promete resultado em X dias, não mostra antes e depois de paciente sem autorização, não fala mal de concorrente. Quem é o cliente ideal: adulto de 35 a 65 anos que perdeu dente ou quer melhorar o sorriso e mora a até 15 km da clínica.",
+  "pais": "BR",
+  "regiao": "Campinas e região (SP)",
+  "termos": [
+    "implante dentário",
+    "implante dentário Campinas",
+    "dentista Campinas",
+    "clínica odontológica",
+    "lente de contato dental",
+    "prótese protocolo",
+    "aparelho invisível"
+  ],
+  "midia": "all",
+  "rolagens": 25,
+  "minDias": 30,
+  "grupos": {
+    "clinica": "Clínica ou consultório que vende o tratamento para o paciente",
+    "rede": "Rede ou franquia com várias unidades"
+  },
+  "limitePorGrupo": { "clinica": 2, "rede": 3 },
+  "limitePorAnunciante": 2,
+  "beneficios": [
+    { "id": "avaliacao_gratis", "rotulo": "Avaliação ou consulta grátis", "re": "(avalia[cç][aã]o|consulta)[^.\\n]{0,20}(gr[aá]tis|gratuit|sem custo)" },
+    { "id": "parcelamento", "rotulo": "Parcelamento (em até X vezes)", "re": "parcel|em at[eé] \\d+ ?x|sem juros" },
+    { "id": "preco", "rotulo": "Preço na peça", "re": "r\\$\\s?\\d|a partir de" },
+    { "id": "sem_dor", "rotulo": "Sem dor / sedação", "re": "sem dor|indolor|seda[cç][aã]o" },
+    { "id": "rapido", "rotulo": "Dente no mesmo dia / prazo curto", "re": "(mesmo|no) dia|em \\d+ (horas|dias)|carga imediata" },
+    { "id": "antes_depois", "rotulo": "Antes e depois", "re": "antes e depois" },
+    { "id": "tecnologia", "rotulo": "Tecnologia (scanner, 3D, guiada)", "re": "scanner|3d|cirurgia guiada|tomografia|digital" },
+    { "id": "local", "rotulo": "Fala da cidade ou do bairro", "re": "campinas|barão geraldo|cambuí|taquaral|valinhos|hortolândia|sumaré" },
+    { "id": "vagas", "rotulo": "Escassez (poucas vagas, só este mês)", "re": "(poucas|[uú]ltimas|apenas \\d+) vagas|vagas limitadas|s[oó] (este|esse) m[eê]s" },
+    { "id": "autoridade", "rotulo": "Anos de experiência, especialista, nº de pacientes", "re": "\\d+ anos|especialista|\\d+(\\.\\d+)? (pacientes|implantes|sorrisos)" }
+  ]
+}

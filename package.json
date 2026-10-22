@@ -1,0 +1,12 @@
+{
+  "name": "trafego-kit-aluno",
+  "private": true,
+  "type": "module",
+  "description": "Trafego para geracao de leads operado por IA: estudo de mercado, landing page, rastreamento e painel",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}
