@@ -30,12 +30,29 @@ E as duas ferramentas que operam as contas pela API oficial:
 
 ## O que você precisa ter
 
-| | Para |
+Não precisa decorar esta tabela: no primeiro "oi", o agente roda o `verificar.mjs`, confere o seu PC e te mostra o
+mapa do que está liberado, o que falta e o comando para instalar.
+
+| Programa | Para que serve | Sem ele |
+|---|---|---|
+| um agente de IA de terminal | Claude Code, Codex ou Antigravity: é quem opera a pasta | nada roda |
+| **Node 20+** e `npm install` | rodam os scripts e controlam o seu Chrome | não existe estudo |
+| **Google Chrome** | lê a Biblioteca de Anúncios e abre as landing pages | não existe estudo |
+| **ffmpeg** | a IA "vê" os vídeos em 12 quadros e o painel é montado | a busca roda, mas a IA não vê os vídeos e **o painel não sai** |
+| **Python 3** + `faster-whisper` | a IA ouve o que é falado nos vídeos | o vídeo é avaliado só pela imagem e pela legenda |
+| **Python 3** + o SDK de cada um | `meta-ads/` e `google-ads/` operam as contas | você não lê nem mexe na conta pela IA; as palavras do Google entram por CSV |
+
+E onde o painel vai morar:
+
+| Você quer | Precisa de |
 |---|---|
-| **Node 20+** e **Google Chrome** | o estudo de mercado (lê a Biblioteca de Anúncios pelo seu navegador) |
-| **ffmpeg** | o estudo de mercado (a IA vê os vídeos em quadros) |
-| **Python 3** | `meta-ads/` e `google-ads/`, e a transcrição opcional do estudo |
-| um agente de IA de terminal | Claude Code, Codex ou Antigravity: é o ponto desta pasta |
+| estudar sozinho | nada: o painel abre no seu PC, dois cliques |
+| o cliente ver por um link | hospedagem de site + domínio, numa pasta com senha (não precisa de VPS) |
+| o estudo rodar sozinho todo mês | uma VPS |
+
+Recomendação: [hospedagem de site](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=214984&url_id=3648) ou
+[VPS](https://www.hostg.xyz/aff_c?offer_id=6&aff_id=214984&url_id=5038) da Hostinger, com o cupom `PEDROALMEIDA`
+(10% de desconto).
 
 O passo a passo da instalação está no [COMECE-AQUI.md](COMECE-AQUI.md).
 

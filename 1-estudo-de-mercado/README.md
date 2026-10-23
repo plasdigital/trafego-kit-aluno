@@ -22,12 +22,14 @@ painel. Leva de 1 a 3 horas no total, a maior parte rodando sozinho.
 
 ## O que precisa
 
-| | |
-|---|---|
-| Node 20+ e Google Chrome | para ler a Biblioteca e as páginas (de graça, pelo seu navegador) |
-| ffmpeg | para a IA "ver" os vídeos em quadros |
-| Python + `faster-whisper` | **opcional**: transcrever a fala dos vídeos no seu PC |
-| Nenhuma chave de API | nada aqui é pago |
+| | Para | Sem ele |
+|---|---|---|
+| Node 20+ e Google Chrome | ler a Biblioteca e as páginas (de graça, pelo seu navegador) | não existe estudo |
+| ffmpeg | a IA "ver" os vídeos em quadros e montar o painel | a IA não vê os vídeos e o painel não sai |
+| Python + `faster-whisper` | a IA ouvir a fala dos vídeos, no seu PC | o vídeo é avaliado só pela imagem e pela legenda |
+| Nenhuma chave de API | nada aqui é pago | |
+
+O agente confere tudo isso sozinho (`node verificar.mjs`) e te diz o que falta.
 
 ## Para entender antes de rodar
 

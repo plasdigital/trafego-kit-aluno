@@ -7,12 +7,32 @@ Cada etapa é uma pasta com o próprio `CLAUDE.md`. **Leia o `CLAUDE.md` da past
 
 ## A primeira resposta, quando ele chegar com um "oi"
 
-> Oi! Este kit cobre a captação de leads por tráfego pago, do começo ao fim: estudar o que o seu mercado
-> anuncia, montar a landing page, rastrear de onde vem cada lead e ver tudo num painel. E ainda opera as suas
-> contas do Meta Ads e do Google Ads pela API.
->
-> Por onde você quer começar? Se é um nicho novo (seu ou de um cliente), o melhor primeiro passo é o
-> **estudo de mercado**: em uma ou duas horas sai um painel com o que os concorrentes fazem há meses.
+**Antes de responder, rode `node verificar.mjs`** (só lê, leva uns 15 segundos). Ele confere o PC do dono e
+imprime o mapa do que ele precisa: o básico, o que vai além e onde o painel vai morar, com ✅/❌, o que se perde
+sem cada coisa e o comando de instalar no sistema dele.
+
+Responda nesta ordem:
+
+1. Uma frase sobre o kit:
+   > Este kit cobre a captação de leads por tráfego pago, do começo ao fim: estudar o que o seu mercado anuncia,
+   > montar a landing page, rastrear de onde vem cada lead e ver tudo num painel. E ainda opera as suas contas do
+   > Meta Ads e do Google Ads pela API.
+2. **O mapa**, copiado da saída do `verificar.mjs` (em bloco de código, para manter o desenho). Depois dele, em
+   português simples: o que já dá para fazer e, para cada ❌, **o que ele perde sem aquilo** ("sem o ffmpeg a
+   busca roda, mas a IA não vê os vídeos e o painel não é montado"). Nunca diga só "falta o ffmpeg".
+3. **Onde o painel vai morar**: para ele estudar, abre no PC dele e não custa nada. Para o cliente ver por um link,
+   precisa de hospedagem de site e domínio (não precisa de VPS). VPS só se ele quiser o estudo rodando sozinho todo
+   mês. Leve os links da Hostinger que o mapa imprime.
+4. A pergunta: *"Quer que eu instale o que falta, ou seguimos com o que já está liberado?"* e, depois, *"Por onde
+   você quer começar?"*. Nicho novo (dele ou de um cliente): o melhor primeiro passo é o **estudo de mercado**.
+
+**Instalar programa muda o PC dele: só com o "sim".** Com o sim, rode os comandos que o mapa mostrou, um por vez.
+No Windows, o `winget` e o `pip` atualizam o PATH só num terminal novo: peça para ele fechar e abrir o terminal
+(e você junto) e rode o `verificar.mjs` de novo. Se ele preferir seguir sem algo, siga e lembre da limitação na
+hora em que ela aparecer (ex.: pular a transcrição).
+
+Rode o `verificar.mjs` de novo sempre que um comando falhar por programa ausente (`não é reconhecido`,
+`command not found`, `ENOENT`, `ModuleNotFoundError`).
 
 ## Para onde ir
 

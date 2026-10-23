@@ -6,6 +6,9 @@
   "engines": {
     "node": ">=20.11"
   },
+  "scripts": {
+    "verificar": "node verificar.mjs"
+  },
   "dependencies": {
     "playwright": "^1.60.0"
   }

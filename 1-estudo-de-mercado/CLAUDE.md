@@ -67,12 +67,15 @@ dono; não invente.
 
 ## O que precisa estar instalado
 
-| Para | Precisa | Confere com |
+**Antes do passo 1, rode `node verificar.mjs`** (da raiz do kit). Faltou algo do básico: diga ao dono o que ele
+perde e pergunte se instala, **antes** de começar a coleta. Não descubra no passo 10 que o painel não sai.
+
+| Para | Precisa | Sem isso |
 |---|---|---|
-| passos 1 e 6 | Node 20+, `npm install` na raiz do kit, Google Chrome | `node -v` e `npx playwright --version` |
-| passos 7 e 10 | ffmpeg | `ffmpeg -version` |
-| passo 5 | Python 3 e `pip install faster-whisper` | `python -c "import faster_whisper"` |
-| passo 11 | o CSV do Planejador de palavras-chave, ou o `google-ads/` configurado com acesso Basic | — |
+| passos 1 e 6 | Node 20+, `npm install` na raiz do kit, Google Chrome | não existe estudo |
+| passos 7 e 10 | ffmpeg (com o ffprobe) | a IA não vê os vídeos e o `montar.mjs` para: **o painel não sai** |
+| passo 5 | Python 3 e `pip install faster-whisper` | o vídeo é avaliado só pela imagem e pela legenda |
+| passo 11 | o CSV do Planejador de palavras-chave, ou o `google-ads/` configurado com acesso Basic | sem a aba do Google no painel |
 
 ## Travas
 
