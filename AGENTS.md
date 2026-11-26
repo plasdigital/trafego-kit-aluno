@@ -46,14 +46,16 @@ Rode o `verificar.mjs` de novo sempre que um comando falhar por programa ausente
 
 | O dono pede | Pasta | Estado |
 |---|---|---|
+| **como se faz**: as etapas, planejamento, anúncios, criativos, análise, relatório, consultoria | [0-metodo/](0-metodo/AGENTS.md) | pronto |
 | estudo de mercado, concorrentes, "o que estão anunciando", benchmark, palavras mais concorridas | [1-estudo-de-mercado/](1-estudo-de-mercado/AGENTS.md) | pronto |
-| landing page de captação, formulário que filtra o lead | `2-landing-page/` | em breve |
-| rastreamento: Tag Manager, GA4, Pixel, API de Conversões, lead no banco | `3-rastreamento/` | em breve |
-| painel dos leads: do anúncio à venda | `4-painel-dos-leads/` | em breve |
+| landing page de captação, formulário que filtra o lead | [0-metodo/docs/formulario-inteligente.md](0-metodo/docs/formulario-inteligente.md) | método pronto; o molde da página, em breve |
+| rastreamento: Tag Manager, GA4, Pixel, API de Conversões, lead no banco, o que pedir ao cliente | [3-rastreamento/](3-rastreamento/AGENTS.md) | pronto |
+| painel dos leads: do anúncio à venda | [0-metodo/docs/analise-funil.md](0-metodo/docs/analise-funil.md) | método pronto; o painel, em breve |
 | operar a conta do **Meta Ads**: relatório, campanha, público, anúncio, edição em massa | [meta-ads/](meta-ads/AGENTS.md) | pronto |
 | operar a conta do **Google Ads**: relatório, palavra-chave, campanha, negativa | [google-ads/](google-ads/AGENTS.md) | pronto |
 
-Pasta "em breve" não existe ainda: diga isso ao dono e ofereça o que já está pronto.
+**Antes de planejar, criar ou analisar, leia o documento do `0-metodo/` daquela etapa.** Ele é a régua; as pastas de
+API são o comando. O que está "em breve" é o código pronto: diga isso ao dono e faça pelo método.
 
 `meta-ads/` e `google-ads/` são kits completos, com `.env` e `setup.py` próprios. Para trabalhar neles, rode os
 comandos **de dentro da pasta deles** (`cd meta-ads`), como o `AGENTS.md` de cada um manda.

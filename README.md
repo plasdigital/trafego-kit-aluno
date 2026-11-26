@@ -14,12 +14,16 @@ E aí, na conversa: **"oi"**.
 
 ## As etapas
 
+Primeiro, **[o método](0-metodo/README.md)**: o como se faz de cada etapa, escrito a partir de campanhas reais de
+negócio local (onboarding, planejamento, anúncios, criativos, landing page, rastreamento, análise, relatório e
+consultoria). É a régua que a IA lê antes de agir.
+
 | | Etapa | O que sai | |
 |---|---|---|---|
 | 1 | **[Estudo de mercado](1-estudo-de-mercado/README.md)** | Um painel com o que os concorrentes anunciam há 30+ dias: destino, estilo, anúncios mais rodados, landing pages, perguntas do formulário, palavras mais concorridas | ✅ |
-| 2 | Landing page de captação | A página com formulário de uma pergunta por vez, que filtra o lead sem perder ninguém | em breve |
-| 3 | Rastreamento | Tag Manager, GA4, Pixel com API de Conversões, mapa de calor, lead no banco com a origem, e o que pedir ao cliente | em breve |
-| 4 | Painel dos leads | O funil do anúncio à venda, com o custo de cada etapa | em breve |
+| 2 | Landing page de captação | A página com formulário de uma pergunta por vez, que filtra o lead sem perder ninguém | método ✅ · molde da página em breve |
+| 3 | **[Rastreamento](3-rastreamento/README.md)** | Tag Manager, GA4, Pixel com API de Conversões, mapa de calor, lead no banco com a origem, e o que pedir ao cliente | ✅ |
+| 4 | Painel dos leads | O funil do anúncio à venda, com o custo de cada etapa | método ✅ · painel em breve |
 
 E as duas ferramentas que operam as contas pela API oficial:
 
