@@ -141,7 +141,7 @@ O diferencial "que ninguém promete", tirado do estudo de concorrentes, **só en
 
 ---
 
-## Em aberto (decisão do gestor)
+## Não é regra fixa (o gestor escolhe por cliente)
 
 - **O cliente aprova o texto do anúncio ou só confirma os fatos?** Até hoje ele só confirma os fatos (seção 1); o
   texto quem aprova é o gestor.

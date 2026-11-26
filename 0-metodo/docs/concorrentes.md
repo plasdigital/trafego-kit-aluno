@@ -21,7 +21,7 @@ me dá o link da página de anúncios, os que estão rodando há mais tempo, sal
 - Comentário do gestor em áudio sobre cada referência → a IA transcreve e preenche os campos.
 - Estudo escrito → `clientes/<cliente>/concorrentes/AAAA-MM-DD-<assunto>.md`.
 
-## Revisão de 26/11/2026
+## Aprendizados de 26/11/2026 (ponto de partida, não regra fixa)
 
 - **O estudo virou varredura:** a biblioteca da Meta e a do Google varridas por termo, com o vídeo transcrito e tudo
   num painel (empresa de proteção veicular, 06/11). A esteira está em `1-estudo-de-mercado/` no kit do aluno. O corte usado na esteira é

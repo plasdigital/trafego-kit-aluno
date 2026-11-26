@@ -48,7 +48,7 @@ Bom dia, pessoal! Aqui o resultado da semana (DD/MM a DD/MM).
 - **Status de onboarding:** o que já está pronto, o que está esperando eles (acesso, documento, cartão) e o prazo de cada espera.
 - **Pedido de informação:** perguntas numeradas, e o que já se sabe escrito para eles só confirmarem ("onde já tenho a informação, escrevi o que entendi").
 
-## Revisão de 26/11/2026
+## Aprendizados de 26/11/2026 (ponto de partida, não regra fixa)
 
 - **Campanha parada aparece com o motivo** (pagamento, saldo, reprovação, pausa) e o que precisa do cliente: número
   zerado sem motivo assusta e não diz o que fazer (farmácia, 17/11).

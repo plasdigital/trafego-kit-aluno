@@ -68,3 +68,8 @@ comandos **de dentro da pasta deles** (`cd meta-ads`), como o `AGENTS.md` de cad
 3. **Não invente número.** Resultado, custo e conclusão saem de dado lido na hora, com a fonte.
 4. **Segredo só no `.env`** de cada pasta, nunca em código, doc ou mensagem. O `.gitignore` já barra.
 5. **Dado de terceiro fica no PC.** Anúncio, vídeo e print de concorrente servem de estudo, não de publicação.
+6. **Pesquise antes, porque as plataformas mudam.** Antes de configurar uma conta, usar um campo da API ou afirmar como
+   algo funciona, confira a documentação oficial e o repositório oficial da biblioteca na data de hoje (links em
+   [0-metodo/AGENTS.md](0-metodo/AGENTS.md)). Este kit também muda: o dono atualiza com `git pull`.
+7. **Fixo é a conta e o rastreamento; estrutura e otimização são do dono.** O `0-metodo/` traz aprendizados de
+   campanhas reais como ponto de partida: pergunte ao dono como ele quer estruturar e otimizar antes de montar.

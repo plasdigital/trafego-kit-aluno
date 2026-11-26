@@ -25,7 +25,12 @@ novo copia esse gerador.
 ## Meta Ads
 
 - **Objetivo:** cadastro na LP com formulário (rendeu mais que mensagem na empresa de proteção veicular). Mensagem direta quando o negócio vende na conversa (farmácia).
-- **Estrutura padrão (o gestor, 27/out/2026, para todo cliente):**
+> **O que aqui é fixo e o que é aprendizado (o gestor, 26/11/2026).** Fixo: o público dentro da área, a campanha subir
+> pausada e o rastreamento ([criar-contas.md](criar-contas.md)). A estrutura de campanha, os dias sem mexer e o ritmo
+> de teste são **aprendizados de campanhas reais**: ponto de partida, não regra. O gestor decide com o resultado; o
+> agente pergunta como ele quer estruturar e otimizar antes de montar.
+
+- **Estrutura que funcionou na empresa de proteção veicular (o gestor, 27/out/2026; aprendizado, não regra fixa):**
   - **Uma campanha CBO por perfil** (na empresa de proteção veicular, por veículo: carro × moto e scooter), isoladas umas das outras.
   - **O criativo que já funciona fica num conjunto só dele, com verba mínima de R$ 15 a R$ 20 por dia,** para o Meta
     gastar nele.
@@ -43,7 +48,9 @@ novo copia esse gerador.
   herda o original, então leia a segmentação pela API antes de ligar ou religar. Idade cortada quando o produto pede (empresa de proteção veicular: a partir de 25 anos).
 - **Horário:** só quando há atendimento para responder (farmácia: de 9h a 1 h antes de a entrega fechar).
 - **Criativos:** os escolhidos das referências, com a variação por perfil; conteúdo dentro do 4:5 mesmo quando vai para stories.
-- **Não mexer nos 7 primeiros dias.** Verba sobe no máximo 20% a cada 3 ou 4 dias.
+- **Aprendizado de ritmo:** deixar a campanha aprender nos primeiros dias antes de mexer na estrutura; verba sobe aos
+  poucos (até ~20% a cada 3 ou 4 dias). Otimização diária do anúncio pela régua de pausa também é válida; o gestor
+  escolhe.
 - Campanha sobe **pausada**; o gestor ativa.
 
 ## A página do plano (para o cliente)
@@ -51,7 +58,7 @@ novo copia esse gerador.
 Destino, público, local, verba por dia e por canal, palavras e negativas, criativos, o que se mede e quando
 se revê. Visual, em lista; o cliente bate o olho e entende.
 
-## Revisão de 26/11/2026 (empresa de proteção veicular, farmácia, empresa de drywall e planejados, uma ficha por conversa)
+## Aprendizados de 26/11/2026 (empresa de proteção veicular, farmácia, empresa de drywall e planejados): ponto de partida, não regra fixa
 
 **Meta**
 - **Por que conversão no site e não mensagem:** no objetivo de mensagem, todo clique, até o sem querer, vira sinal de
@@ -91,12 +98,12 @@ se revê. Visual, em lista; o cliente bate o olho e entende.
   cada um. Nada de "só no plano X" ou "conforme o plano": o detalhe assusta antes de virar lead e quem explica é o
   vendedor. Exceção só se o dono da conta disser que é obrigatório (empresa de proteção veicular, 09 e 10/11).
 
-**Em aberto (estrutura da Meta):** a estrutura de 27/out (o vencedor num conjunto próprio com piso, o teste em outro)
-convive com a da campanha da própria agência desde 11/nov (verba pequena: um conjunto só, CBO, público aberto por idade,
-4 a 6 criativos bem diferentes e lote novo a cada 7 a 15 dias no mesmo conjunto, que é o que o [criativos.md](criativos.md)
-recomenda). Leitura até o gestor decidir: **largada num conjunto só; o vencedor provado ganha conjunto próprio com piso
-quando um criativo novo começar a roubar a verba dele.**
+**Duas estruturas de Meta que funcionaram (escolha do gestor, não regra):**
+- **Vencedor protegido** (empresa de proteção veicular, 27/out): o vencedor num conjunto próprio com piso, o teste em outro conjunto com teto.
+  Serve quando um criativo novo começa a roubar a verba do único que vende.
+- **Um conjunto só** (campanha da própria agência, 11/nov): CBO, público aberto por idade, 4 a 6 criativos bem
+  diferentes e lote novo a cada 7 a 15 dias no mesmo conjunto (é o que o [criativos.md](criativos.md) descreve). Serve
+  para verba pequena e largada.
 
-**Em aberto:** "não mexer nos 7 primeiros dias" convive com a otimização diária que o gestor promete na venda (farmácia,
-05/11). Até ele decidir, a régua de pausa ([otimizacao-criativo.md](otimizacao-criativo.md)) manda no anúncio e a verba
-total não mexe na 1ª semana.
+**Ritmo:** "dar uns dias para aprender" e "otimizar todo dia pela régua" convivem (farmácia, 05/11). O parâmetro que não
+muda é a régua de pausa ([otimizacao-criativo.md](otimizacao-criativo.md)); o quanto mexer, e quando, é do gestor.

@@ -7,6 +7,7 @@ cada aprendizado novo.
 | Documento | Para quê |
 |---|---|
 | [metodo.md](docs/metodo.md) | as 10 etapas, o que já se provou e o pitch para vender o serviço |
+| [criar-contas.md](docs/criar-contas.md) | **a parte fixa**: as contas (Tag Manager, Google Analytics, Microsoft Clarity, Search Console, Google Ads, Meta) e como cada uma deve ficar |
 | [onboarding-e-rastreamento.md](docs/onboarding-e-rastreamento.md) | o que pedir ao cliente e o rastreamento mínimo antes de ligar a campanha |
 | [instalar-rastreamento-gtm.md](docs/instalar-rastreamento-gtm.md) | Tag Manager, GA4, Google Ads e Pixel, passo a passo |
 | [concorrentes.md](docs/concorrentes.md) | o estudo de concorrentes e de referências (a ferramenta é a pasta `1-estudo-de-mercado/`) |
@@ -20,5 +21,9 @@ cada aprendizado novo.
 | [relatorio-cliente.md](docs/relatorio-cliente.md) | a mensagem da semana para o cliente |
 | [ficha-cliente.md](docs/ficha-cliente.md) | a ficha de contas do cliente, que a IA lê antes de analisar |
 | [consultoria.md](docs/consultoria.md) | como entregar o método em consultoria, para o dono operar sozinho |
+
+**Fixo é a conta e o rastreamento.** Estrutura de campanha e jeito de otimizar são aprendizados de campanhas reais:
+ponto de partida, e a IA pergunta como você quer fazer. E as plataformas mudam sempre: a IA confere a documentação
+oficial antes de configurar.
 
 Não precisa ler na ordem. Abra o agente na raiz do kit e peça em português; ele acha o documento certo.

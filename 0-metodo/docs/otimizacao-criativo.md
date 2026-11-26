@@ -201,7 +201,7 @@ primeiro (Sobral).
 
 ---
 
-## Revisão de 26/11/2026: custo por page view, acervo e reserva
+## Aprendizados de 26/11/2026: custo por page view, acervo e reserva (ponto de partida, não regra fixa)
 
 - **O custo por page view é a triagem do criativo antes do lead.** Enquanto o criativo ainda não tem leads para a
   régua, olhe quanto custa cada pessoa que de fato viu a página, não o CTR. Defina um teto por cliente. Custo por page

@@ -149,7 +149,7 @@ versão mais curta. As seções vêm nesta ordem e com estes nomes:
 Depois do relatório, a **mensagem para o grupo do cliente** sai no formato de
 [relatorio-cliente.md](relatorio-cliente.md), primeiro para o gestor.
 
-## Revisão de 26/11/2026: contar certo
+## Aprendizados de 26/11/2026: contar certo (ponto de partida, não regra fixa)
 
 1. **A meta do mês é de lead qualificado, em 4 categorias.** Defina com o cliente o dado que qualifica (a placa, um
    documento, uma medida) e separe sempre: completo com o dado · completo sem · incompleto com · incompleto sem. Para a
