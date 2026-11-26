@@ -1,6 +1,6 @@
 # LP com formulário inteligente (cliente de geração de leads)
 
-o gestor, 22/out/2026: *"aquele formulário aparecendo uma pergunta por vez, dando destaque a elementos
+O gestor, 22/out/2026: *"aquele formulário aparecendo uma pergunta por vez, dando destaque a elementos
 desclassificatórios, isso faz total diferença para qualificar os leads... resgatar o pessoal que não
 preencheu completamente, mas não marcar como lead... mesmo que a gente não atenda aquele tipo de
 cliente, deixar ali para ver se está chegando."*
@@ -50,4 +50,23 @@ banco.
 - **25/11/2026: seção que repete o formulário sai.** Uma seção "escolha o seu veículo" depois de um formulário que já pergunta o veículo é repetição. Porquê: *"ficou repetitivo… a terceira seção já existe"*.
 - **25/11/2026: "como funciona" em passos não entra em LP.** Porquê: *"esse processo de como que funciona, ninguém nunca lê isso"*.
 - **25/11/2026: a 2ª seção é confiança.** Logo abaixo do topo: prova social (nota do Google, depoimentos, números reais). Os valores ficam no topo, no molde da empresa de proteção veicular ("Valores mensais a partir de", um por tipo de veículo, sem "/mês" em cada um). Porquê: *"a segunda seção é algo que vai gerar confiança, credibilidade… tinha que ter a parte de provas sociais, depoimentos"*.
+- **Revisão de 26/11/2026 (decisões espalhadas pelas conversas):**
+  - **Ordem das perguntas:** o gestor tem usado **o produto ou o serviço primeiro** (um toque: "Vamos cotar o seu
+    veículo", carro/moto/frota) e **o WhatsApp logo depois**, com o nome no fim (empresa de proteção veicular 10/11, empresa de rastreamento veicular 25/11); na empresa de drywall e planejados ficou
+    opção → nome → WhatsApp. A peça 2 ("WhatsApp primeiro") vale como "WhatsApp antes de qualquer pergunta longa".
+  - **Formulário B2B:** a 1ª pergunta é o problema (um toque), depois o WhatsApp, e o nome por último; Instagram e site
+    opcionais. Faixas de resposta finas onde a decisão muda (1, 2, 3 separados, depois 4 a 6) e a pergunta "já investe
+    em anúncio?" (25/11).
+  - **Produto simples:** formulário curto, categoria, telefone e nome (empresa de rastreamento veicular, 25/11).
+  - **O formulário embutido fora da LP é o mesmo formulário dinâmico**, para qualificar e medir igual em toda porta de
+    entrada (25/11). Todo formulário coleta o telefone; nenhum botão abre o WhatsApp sem passar por ele (empresa de drywall e planejados, 18/11).
+  - **Página leve:** LP de campanha num subdomínio limpo, só com o necessário, e os scripts pesados carregando quando o
+    visitante chega perto deles (06/11).
+  - **Dois modelos para oferecer:** LP completa com formulário dinâmico, ou página só de formulário (09/11).
+  - **Integração com o CRM do cliente:** tudo num campo interno, o e-mail primeiro, e testar com um lead de teste
+    (empresa de proteção veicular, 18/11). CRM visual com um card para todo lead (empresa de proteção veicular, 11/11).
+  - **A 2ª seção de prova social conta mesmo sem play:** depoimento em texto ou print com a nota, porque a maioria não
+    toca no vídeo (empresa de proteção veicular, 11/11).
+  - **Em lead local, o básico com pouca imagem converte**, mesmo quando o cliente pede "mais visual"; quem converte
+    decide no topo (25/11).
 - **25/11/2026: quadro de vídeo usado como foto parece vídeo quebrado.** Frame com legenda queimada ou pose de fala não serve de foto de seção. Porquê: *"você tentou botar alguns vídeos, mas não rolou"*.

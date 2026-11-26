@@ -21,6 +21,22 @@ me dá o link da página de anúncios, os que estão rodando há mais tempo, sal
 - Comentário do gestor em áudio sobre cada referência → a IA transcreve e preenche os campos.
 - Estudo escrito → `clientes/<cliente>/concorrentes/AAAA-MM-DD-<assunto>.md`.
 
+## Revisão de 26/11/2026
+
+- **O estudo virou varredura:** a biblioteca da Meta e a do Google varridas por termo, com o vídeo transcrito e tudo
+  num painel (empresa de proteção veicular, 06/11). A esteira está em `1-estudo-de-mercado/` no kit do aluno. O corte usado na esteira é
+  **30 dias rodando** (o gestor, 22/10/2026); os 15 dias do passo 3 acima são o mínimo para olhar.
+- **Estudo por produto**, quando o cliente vende mais de um: cada produto tem concorrente e comunicação próprios
+  (empresa de proteção veicular, 09/11).
+- **O estudo entrega os links das landing pages** de cada concorrente, a comunicação de cada um e os criativos: alimenta
+  a LP e o criativo do cliente (empresa de rastreamento veicular, 25/11).
+- **Anúncio de busca: pesquise os concorrentes no próprio Google** e copie a estrutura que deixa o serviço claro
+  (títulos e sitelinks), não o texto (empresa de drywall e planejados, 17/11).
+- **Na venda, o estudo é argumento:** o volume de buscas do serviço na região, no estado e no país prova que existe
+  demanda antes de o cliente investir; o estudo fica pronto antes da reunião (farmácia, 04 e 19/11).
+- **Criativo novo parte de uma referência codificada** do estudo (o código da referência fica no registro do criativo)
+  (empresa de proteção veicular, 09/11).
+
 ## Concorrência local (preço e oferta)
 
 Para varejo (farmácia, Black Friday): pesquisar os concorrentes do bairro e da cidade (site, Instagram, Google

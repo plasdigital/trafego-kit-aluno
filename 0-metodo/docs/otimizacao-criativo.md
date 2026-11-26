@@ -201,6 +201,20 @@ primeiro (Sobral).
 
 ---
 
+## Revisão de 26/11/2026: custo por page view, acervo e reserva
+
+- **O custo por page view é a triagem do criativo antes do lead.** Enquanto o criativo ainda não tem leads para a
+  régua, olhe quanto custa cada pessoa que de fato viu a página, não o CTR. Defina um teto por cliente. Custo por page
+  view bom com zero conversão aponta para o encaixe entre anúncio e página (promessa, preço, informação que assusta),
+  não para o criativo sozinho (empresa de proteção veicular, 09/11).
+- **Registro único de criativos** (código, público, região, resultado), consultado antes de produzir: formato já
+  reprovado não se refaz. Todo material novo do cliente é transcrito; o bruto se corta a partir da frase forte e vira
+  anúncio, depoimento da página ou os dois. Material que o cliente gravou não se descarta sem teste (empresa de proteção veicular, 02 a 11/11).
+- **Reserva pronta antes de o atual cansar**, com aviso quando o cliente põe material novo na pasta (empresa de proteção veicular, 09/11).
+- **Quantos conceitos ao mesmo tempo:** com verba pequena o gestor roda 2 por vez e deixa os outros na reserva; o
+  [criativos.md](criativos.md) fala em 4 a 6 na largada. A largada abre com 4 a 6 quando a verba aguenta; depois, 2 em
+  teste por vez (empresa de proteção veicular, 27/10 a 18/11).
+
 ## Fontes
 
 | ID | Autor | Vídeo |

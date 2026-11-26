@@ -1,6 +1,6 @@
 # O método de geração de leads (do onboarding à venda)
 
-o gestor, 22/out/2026: *"pegar esse mesmo processo, como está documentado, e conseguir ensinar para outras
+O gestor, 22/out/2026: *"pegar esse mesmo processo, como está documentado, e conseguir ensinar para outras
 pessoas... vai servir como explicação na hora de vendas: o site não vai ser simples um site, vai ser uma
 landing page focada nisso, o formulário é para filtrar o lead mas não perder ninguém, a gente vai rastrear
 tudo, vai ter mapa de calor, e quando o lead chegar a gente vai estar integrado com a automação."*
@@ -70,3 +70,41 @@ Na ordem em que o cliente entende:
 
 Prova: os números da empresa de proteção veicular (custo por lead, taxa de conversão do formulário, vendas). Para usar em
 público, só %, tempo e proporção, nunca número absoluto do cliente.
+
+**Os dois pilares** (05/11/2026): (1) mais leads qualificados, que é o marketing; (2) mais conversão desses leads, que é
+o atendimento e as vendas. Cada etapa ganha uma tela com um caso real.
+
+---
+
+## A proposta de tráfego (padrão de 19 a 25/11/2026)
+
+1. **Antes da reunião:** o estudo de mercado pronto (volume de busca do serviço na região, no estado e no país, os
+   concorrentes com as LPs e os criativos) e, se der, **uma prévia da LP do lead já publicada**. A reunião de
+   diagnóstico segue um roteiro fixo: como capta hoje, ferramenta de atendimento, quanto investe em tráfego, site, CRM
+   e quem faz a gestão.
+2. **Lista de entregas, nunca só o preço.** Implementação (contas, e-mail, vínculos, GTM, GA4, Clarity, Pixel, LP e
+   formulário ligado ao WhatsApp e ao e-mail) separada do mensal (planejamento, palavras e negativas, anúncios,
+   otimização, relatório).
+3. **Três dinheiros separados:** implementação, gestão mensal e verba de mídia. **Custos de terceiros à parte** (API do
+   WhatsApp por mil mensagens, API da IA, ferramenta de atendimento), para não virar surpresa.
+4. **Google e Meta em planos próprios**, e o combo. A gestão de Meta custa mais porque inclui a produção de criativo.
+5. **Visual:** prints da conta e do painel e o funil desenhado (pesquisa → anúncio → página → formulário → WhatsApp →
+   venda); o cliente não sabe o que é "formulário dinâmico". **O valor aparece só na tela de cada plano.**
+6. **Prazo escrito** (implementação em até 2 semanas com os acessos entregues). Bônus não vira cobrança depois.
+   Parcelamento só na negociação. O que é manual fica escrito como manual.
+7. **Degrau de entrada para quem já perdeu dinheiro com outro gestor:** consultoria ou mentoria de implementação ao
+   lado do serviço mensal ([consultoria.md](consultoria.md)).
+8. **O que segura o contrato:** cliente que contrata só tráfego e dá pouco acesso tem vínculo fraco. Entrar no
+   atendimento e no CRM é o que mostra o resultado em venda.
+
+## Reengajar a base (frente de venda, farmácia, 02 a 20/11/2026)
+
+O cliente que já tem base no WhatsApp ganha uma segunda fonte de venda, sem verba de anúncio:
+
+- **Alvo:** todo atendimento parado à espera do cliente (passou preço e sumiu). Quem já comprou recebe só o aviso.
+- **Mensagem:** curta, genérica ("podemos dar continuidade?"), com o gancho da promoção do mês e **uma** oferta, num
+  template de **utilidade** com a mensagem na variável.
+- **Envio:** um teste por template, depois um por um, conferindo cada envio, com log (lote, número, template, status,
+  erro, hora). A IA de atendimento fica desligada para quem recebe o disparo; quem toca "continuar" recebe o link de novo.
+- **Link** com UTM curta: a origem (`source=wa`) e o identificador do contato.
+- **Relatório:** o de disparo, em [relatorio-cliente.md](relatorio-cliente.md).

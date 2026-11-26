@@ -13,7 +13,7 @@ novo copia esse gerador.
 
 ## Google Ads (Rede de Pesquisa)
 
-- **Começar restrito e abrir com o resultado:** região perto da empresa (empresa de drywall e planejados: raio de 3 a 5 km, R$ 20/dia) e as buscas mais óbvias. Ir negativando e ampliando.
+- **Começar restrito e abrir com o resultado:** região perto da empresa (empresa de drywall e planejados: raio de 20 km da loja, decisão fixa do gestor de 27/out/2026; o raio é escolha de verba, não a área de atendimento) e as buscas mais óbvias. Ir negativando e ampliando.
 - **Sem campanha de marca** no começo e **sem comprar o nome do concorrente**.
 - Local por **Presença**, nunca "Presença ou interesse".
 - Volume de busca real (Planejador de palavras-chave) da região e, para entender o nicho, do estado ou do Brasil.
@@ -37,7 +37,10 @@ novo copia esse gerador.
   visita é a perda no carregamento; clique → page view mostra quem fecha antes do Pixel carregar
   ([analise-funil.md](analise-funil.md), degrau 2).
 - **Régua de pausa:** a do gestor, em [otimizacao-criativo.md](otimizacao-criativo.md) §4.1.
-- **Público:** "Pessoas que moram neste local", expansão de local **desligada**, sem Advantage+ de público fora da área. Idade cortada quando o produto pede (empresa de proteção veicular: a partir de 25 anos).
+- **Público:** cidade só da área, expansão de local **desligada** (`targeting_automation.individual_setting.geo = 0`),
+  sem Advantage+ de público fora da área. ⚠️ Desde nov/2026 a Meta **tirou** o "Pessoas que moram neste local": conjunto
+  novo não manda `location_types`; conjunto antigo que dá erro ao editar se regrava sem esse campo; conjunto duplicado
+  herda o original, então leia a segmentação pela API antes de ligar ou religar. Idade cortada quando o produto pede (empresa de proteção veicular: a partir de 25 anos).
 - **Horário:** só quando há atendimento para responder (farmácia: de 9h a 1 h antes de a entrega fechar).
 - **Criativos:** os escolhidos das referências, com a variação por perfil; conteúdo dentro do 4:5 mesmo quando vai para stories.
 - **Não mexer nos 7 primeiros dias.** Verba sobe no máximo 20% a cada 3 ou 4 dias.
@@ -47,3 +50,53 @@ novo copia esse gerador.
 
 Destino, público, local, verba por dia e por canal, palavras e negativas, criativos, o que se mede e quando
 se revê. Visual, em lista; o cliente bate o olho e entende.
+
+## Revisão de 26/11/2026 (empresa de proteção veicular, farmácia, empresa de drywall e planejados, uma ficha por conversa)
+
+**Meta**
+- **Por que conversão no site e não mensagem:** no objetivo de mensagem, todo clique, até o sem querer, vira sinal de
+  público para o algoritmo, que passa a buscar curioso; daí o lead que chama no WhatsApp e não responde. A página
+  filtra antes. Mensagem direta só quando o negócio vende na conversa e o volume compensa (farmácia, 05/11).
+- **A verba se divide pelo valor do perfil, não pelo lead mais barato.** Com mais de um produto, a fatia de cada um sai
+  do valor dele para o negócio (ticket, risco, estratégia) e o perfil prioritário ganha campanha própria; sem isso a
+  plataforma joga a verba no lead barato. Produto pouco anunciado na região tem leilão mais barato (empresa de proteção veicular, 27/10).
+- **Post que o cliente quer impulsionar entra como anúncio dentro da campanha que já existe**, com a própria publicação
+  (mantém o engajamento), nunca impulsionamento solto, fora da medição (farmácia, 17 e 19/11).
+- **Vídeo novo com destino ao WhatsApp vira anúncio na mesma campanha**, não campanha nova (farmácia, 08/11).
+- **Nenhuma configuração que não foi pedida** (horário fixo, data de fim) entra por conta própria: o horário fixo
+  travou a entrega de uma campanha de vídeo (farmácia, 08/11). O "horário só com atendimento" vale para campanha de
+  conversa; campanha de vídeo pode rodar o dia todo.
+- **Conta de anúncio trocada:** a antiga vira só histórico e nada nasce nela. Depois de criar, conferir em que conta
+  foi criado. Criar e editar pela API com o token do usuário do sistema (farmácia, 02/11).
+
+**Google**
+- **Compre a palavra do público, escreva a palavra certa.** Os termos que o público busca entram mesmo quando não são o
+  nome técnico ou regulado do produto (proteção veicular: "seguro"); o texto do anúncio mantém o nome correto. O
+  título usa a palavra do público que cobre o grupo de produtos (empresa de proteção veicular, 13/11). Confira a política do Google para o
+  termo antes de comprar.
+- **Antes de reativar uma conta, puxe o histórico inteiro de termos de busca** para montar as negativas (empresa de proteção veicular, 13/11).
+- **Muito clique e pouco lead: revise a copy antes de cortar palavra.** Termo, anúncio e página dizem o mesmo; palavra
+  que já trouxe lead fica e ganha um anúncio melhor. A copy de serviço: [anuncios.md](anuncios.md) (empresa de drywall e planejados, 17/11).
+
+**Verba**
+- **A verba sai da meta:** meta de leads qualificados × custo por lead esperado. Combine com o cliente se o valor é com
+  ou sem o imposto da plataforma e informe o investido sempre com o imposto (empresa de proteção veicular, 27/10 e 11/11).
+- **Durante o mês:** acumulado × meta × dias que faltam (descontando os dias parados), com uma taxa de desqualificação
+  estimada; o que falta vira meta de leads por dia (empresa de proteção veicular, 18/11).
+- **A verba segue a venda, entre canais e entre campanhas:** o canal que mais vende no WhatsApp recebe do que vende
+  menos, mesmo que a plataforma diga outra coisa. Em passos pequenos: o valor sai de uma e entra na outra, sem subir o
+  total de uma vez (farmácia, 04/11; empresa de proteção veicular, 11/11).
+- **Gaste a verba combinada inteira:** sobra no fim do mês é lead que não veio (empresa de drywall e planejados).
+- **Preço em qualquer peça:** só "a partir de R$ X/mês", uma vez, com todos os benefícios e sem dizer qual plano tem
+  cada um. Nada de "só no plano X" ou "conforme o plano": o detalhe assusta antes de virar lead e quem explica é o
+  vendedor. Exceção só se o dono da conta disser que é obrigatório (empresa de proteção veicular, 09 e 10/11).
+
+**Em aberto (estrutura da Meta):** a estrutura de 27/out (o vencedor num conjunto próprio com piso, o teste em outro)
+convive com a da campanha da própria agência desde 11/nov (verba pequena: um conjunto só, CBO, público aberto por idade,
+4 a 6 criativos bem diferentes e lote novo a cada 7 a 15 dias no mesmo conjunto, que é o que o [criativos.md](criativos.md)
+recomenda). Leitura até o gestor decidir: **largada num conjunto só; o vencedor provado ganha conjunto próprio com piso
+quando um criativo novo começar a roubar a verba dele.**
+
+**Em aberto:** "não mexer nos 7 primeiros dias" convive com a otimização diária que o gestor promete na venda (farmácia,
+05/11). Até ele decidir, a régua de pausa ([otimizacao-criativo.md](otimizacao-criativo.md)) manda no anúncio e a verba
+total não mexe na 1ª semana.

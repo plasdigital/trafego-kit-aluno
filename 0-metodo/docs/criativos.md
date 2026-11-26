@@ -94,7 +94,7 @@ diferentes** no mesmo conjunto. Todos passam pelo checklist da seção 5. Depois
 
 ## 5. O checklist do criativo de lead local (síntese nossa)
 
-Antes de subir, cada criativo responde **sim** às 8 perguntas:
+Antes de subir, cada criativo responde **sim** às 10 perguntas:
 
 1. **Em 3 segundos dá para entender o que é?** Um erro comum é o produto ou serviço só aparecer no segundo 5 (Vallory @3–5).
 2. **Tem a cidade ou o bairro**, falado ou escrito? (Heath local @14–16 · Hunsaker · Vallory @5–7)
@@ -104,6 +104,10 @@ Antes de subir, cada criativo responde **sim** às 8 perguntas:
 6. **Promete só o que o cliente cumpre?** Cobertura, prazo e preço conferidos no regulamento. A regra da empresa de proteção veicular vale para todos.
 7. **Legenda queimada e texto fora da área de comentários e botões?**
 8. **Tem 9:16 e 4:5 ou 1:1?** (Heath 2023 @22–29)
+9. **Preço só como "a partir de R$ X/mês", uma vez?** Com todos os benefícios e sem "só no plano X" (regra do gestor,
+   09/11/2026; detalhe em [planejamento.md](planejamento.md), "Verba").
+10. **A cena é plausível** para quem assiste (o carro, a casa, o balcão de verdade), e o criativo de oportunidade
+    (sazonal, notícia) tem data para sair do ar? (empresa de proteção veicular, 09/11/2026)
 
 **O mix da largada** (4 a 6 conceitos, um de cada família do [acervo](acervo-criativos.md)):
 

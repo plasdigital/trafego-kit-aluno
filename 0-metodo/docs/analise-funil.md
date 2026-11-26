@@ -1,6 +1,6 @@
 # Análise profunda do funil: o que olhar em cada etapa
 
-o gestor, 22/out/2026: *"quero uma análise profunda... o lead chegou dentro do site, 10 pessoas que viram,
+O gestor, 22/out/2026: *"quero uma análise profunda... o lead chegou dentro do site, 10 pessoas que viram,
 quem rolou até o final, quem começou o formulário, onde que ele parou, quem preencheu... e depois o
 WhatsApp: qual é o perfil de quem preencheu e mandou mensagem, quem não mandou, o pessoal está
 respondendo, em que etapa está, por que foi arquivado."*
@@ -148,3 +148,33 @@ versão mais curta. As seções vêm nesta ordem e com estes nomes:
 
 Depois do relatório, a **mensagem para o grupo do cliente** sai no formato de
 [relatorio-cliente.md](relatorio-cliente.md), primeiro para o gestor.
+
+## Revisão de 26/11/2026: contar certo
+
+1. **A meta do mês é de lead qualificado, em 4 categorias.** Defina com o cliente o dado que qualifica (a placa, um
+   documento, uma medida) e separe sempre: completo com o dado · completo sem · incompleto com · incompleto sem. Para a
+   meta conta só o completo com o dado. O incompleto fica "sob análise": se o atendimento coletou o dado na conversa,
+   passa a contar. Sem esse dado no produto, qualificado é quem completou e seguiu a conversa. **MQL** é esse lead;
+   **SQL** (o comercial atende?) é a etapa seguinte. Só é lead quem deixou um contato que se possa chamar (empresa de proteção veicular, 11,
+   16 e 18/11).
+2. **O lead que voltou pelo orgânico é do anúncio que o trouxe.** Guarde o 1º toque (cookie com campanha e anúncio):
+   quem clicou no anúncio e se cadastrou depois pela busca, pelo perfil ou digitando o site conta como tráfego, e o
+   crédito vai para o anúncio do cookie. Combine o critério com o cliente. Se uma parte relevante do orgânico tinha
+   clicado antes, o público está conferindo a reputação: responda com prova onde ele pesquisa (página, blog, Perfil da
+   Empresa) (empresa de proteção veicular, 09 a 18/11).
+3. **Sem identificador de clique, um número de WhatsApp por canal** dá a aproximação: as conversas novas de pessoas
+   novas naquele número (farmácia, 13/11).
+4. **A parcial da meta conta o dia de hoje**, direto do banco; a análise de período fechado deixa hoje de fora. Diga
+   qual das duas é (farmácia, 11/11).
+5. **Decida canal, mensagem e atendimento pelas conversas, não pelo custo da plataforma.** Conte qualificado,
+   desqualificado (com o motivo) e quem não respondeu, por canal e anúncio. Na leitura, procure: o público que entendeu
+   o anúncio de outro jeito; o pedido que se repete e o produto não atende; as falhas do atendimento (pergunta
+   ignorada, proposta sem o dado), que vão ao comercial com o exemplo e o link da conversa (empresa de proteção veicular, 06 a 16/11).
+6. **Higiene do relatório.** Recalcule do zero, do banco, até a hora do pedido; número de relatório anterior não se
+   reaproveita. Confira se a conta fecha (o total não é menor que uma parte; dois dias não se misturam). Não mude o
+   critério que o gestor ainda vai combinar com o cliente. Várias mudanças juntas → todas na linha do tempo, e a
+   atribuição se diz incerta (empresa de proteção veicular, 11 a 18/11; farmácia, 04/11).
+7. **Gasto sem destino é emergência:** página fora do ar ou número que não recebe, com anúncio rodando, pausa na hora,
+   antes de qualquer outra coisa. O alerta diário também avisa quando o custo passa da régua e já sugere a ação
+   (farmácia, 30/10 a 10/11).
+8. **Cadastro de 15 a 20% dos que viram a página é normal** em LP de lead local (empresa de proteção veicular, 06/11).

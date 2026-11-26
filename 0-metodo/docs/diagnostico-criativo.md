@@ -1,6 +1,6 @@
 # Manual de análise: do lead ao criativo (o método do cientista)
 
-o gestor, 18/11/2026:
+O gestor, 18/11/2026:
 
 > *"Quero entender muito bem por que aquele criativo funcionou e aquele não funcionou… levanta sempre suposições…
 > para cada etapa do funil… A gente está tentando ser meio que um cientista."*
@@ -44,7 +44,7 @@ A ordem de importância. Uma métrica de baixo nunca ganha de uma de cima:
 5. Interesse na página (tocou no formulário, rolou, ficou).
 6. Clique, CTR, page view, hook.
 
-o gestor: *"todas as vendas vieram do pior criativo, que tem o menor CTR, a menor taxa de conversão… isso é o melhor criativo
+O gestor: *"todas as vendas vieram do pior criativo, que tem o menor CTR, a menor taxa de conversão… isso é o melhor criativo
 que existe, porque o que importa no final das contas é a venda e o lead qualificado."*
 
 Por isso:

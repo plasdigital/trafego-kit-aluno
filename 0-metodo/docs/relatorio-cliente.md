@@ -47,3 +47,16 @@ Bom dia, pessoal! Aqui o resultado da semana (DD/MM a DD/MM).
 - **Campanha nova no ar:** o que sobe, o investimento por dia, quanto dura o crédito atual ("dá para mais 10 ou 11 dias"), e que a reunião continua marcada.
 - **Status de onboarding:** o que já está pronto, o que está esperando eles (acesso, documento, cartão) e o prazo de cada espera.
 - **Pedido de informação:** perguntas numeradas, e o que já se sabe escrito para eles só confirmarem ("onde já tenho a informação, escrevi o que entendi").
+
+## Revisão de 26/11/2026
+
+- **Campanha parada aparece com o motivo** (pagamento, saldo, reprovação, pausa) e o que precisa do cliente: número
+  zerado sem motivo assusta e não diz o que fazer (farmácia, 17/11).
+- **Fechamento do mês com a linha do tempo** do que se fez e do que se aprendeu, não só números (empresa de proteção veicular, 02/11). Antes
+  da renovação, o balanço "contrato × entregue" (empresa de proteção veicular, 20/11).
+- **O relatório pode ser automático**, em dias fixos, com o resultado por canal e o saldo das contas (farmácia, 13/11).
+- **Relatório de disparo para a base:** enviados, custo aproximado, quantos responderam, vendas e valor (cruzando o
+  telefone com o sistema de vendas, o que dá um piso), o aumento contra a média dos dias anteriores e **quantos
+  responderam e ficaram sem retorno da equipe**, que é onde a venda se perde (farmácia, 04/11).
+- **Ao cliente, depois de ligar uma campanha nova:** os serviços que estamos buscando e a pergunta "essas buscas fazem
+  sentido para vocês?" (empresa de drywall e planejados, 27/10).
